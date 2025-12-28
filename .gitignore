@@ -4,7 +4,7 @@
 !/output_dir/*.pdf
 /prj/*
 !/prj/
-lab*/check_*/
+lab*/lab*/check_*/
 # Remove the contents in the /tcl_scripts/output_dir/
 /tcl_scripts/output_dir/*
 !/tcl_scripts/

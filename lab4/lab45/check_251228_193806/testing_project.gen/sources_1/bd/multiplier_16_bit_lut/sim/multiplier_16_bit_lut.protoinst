@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"multiplier_16_bit_lut": {
-			"proto_instances": {
-			}
-		}
-	}
-}
