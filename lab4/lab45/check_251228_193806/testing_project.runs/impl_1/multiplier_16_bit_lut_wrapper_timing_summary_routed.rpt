@@ -1,0 +1,960 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Sun Dec 28 20:04:29 2025
+| Host         : aq-21me000tge running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file multiplier_16_bit_lut_wrapper_timing_summary_routed.rpt -pb multiplier_16_bit_lut_wrapper_timing_summary_routed.pb -rpx multiplier_16_bit_lut_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : multiplier_16_bit_lut_wrapper
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  32          
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (32)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (32)
+5. checking no_input_delay (32)
+6. checking no_output_delay (32)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (32)
+-------------------------
+ There are 32 register/latch pins with no clock driven by root clock pin: CLK_0 (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (32)
+-------------------------------------------------
+ There are 32 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (32)
+-------------------------------
+ There are 32 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (32)
+--------------------------------
+ There are 32 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                   64          inf        0.000                      0                   64           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay            64 Endpoints
+Min Delay            64 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 B_0[14]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][31]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.486ns  (logic 5.212ns (41.740%)  route 7.274ns (58.260%))
+  Logic Levels:           13  (CARRY4=7 IBUF=1 LUT1=1 LUT2=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W3                                                0.000     0.000 f  B_0[14] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[14]
+    W3                   IBUF (Prop_ibuf_I_O)         0.956     0.956 f  B_0_IBUF[14]_inst/O
+                         net (fo=34, routed)          3.972     4.927    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[14]
+    SLICE_X6Y23          LUT2 (Prop_lut2_I0_O)        0.124     5.051 f  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma1/O
+                         net (fo=2, routed)           0.670     5.721    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma_sig
+    SLICE_X6Y24          LUT1 (Prop_lut1_I0_O)        0.124     5.845 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1/O
+                         net (fo=1, routed)           0.000     5.845    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     6.358 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_CARRY4/CO[3]
+                         net (fo=1, routed)           0.009     6.367    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_cout[7]_3
+    SLICE_X6Y25          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     6.586 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[4].ppsub.stageN.muxcy0_CARRY4/O[0]
+                         net (fo=1, routed)           0.793     7.379    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[7]_7[4]
+    SLICE_X5Y25          LUT2 (Prop_lut2_I1_O)        0.295     7.674 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0_i_4/O
+                         net (fo=1, routed)           0.000     7.674    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0_i_4_n_0
+    SLICE_X5Y25          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     8.206 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.206    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0_n_0
+    SLICE_X5Y26          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     8.519 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__1/O[3]
+                         net (fo=1, routed)           0.804     9.323    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp5[11]
+    SLICE_X4Y27          LUT2 (Prop_lut2_I1_O)        0.306     9.629 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2_i_4/O
+                         net (fo=1, routed)           0.000     9.629    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2_i_4_n_0
+    SLICE_X4Y27          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.179 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.179    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2_n_0
+    SLICE_X4Y28          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.513 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__3/O[1]
+                         net (fo=3, routed)           1.027    11.540    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp9[17]
+    SLICE_X2Y28          LUT2 (Prop_lut2_I1_O)        0.303    11.843 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__4_i_3/O
+                         net (fo=1, routed)           0.000    11.843    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__4_i_3_n_0
+    SLICE_X2Y28          CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643    12.486 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__4/O[3]
+                         net (fo=1, routed)           0.000    12.486    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[23]
+    SLICE_X2Y28          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][31]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 B_0[14]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][29]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.471ns  (logic 5.182ns (41.549%)  route 7.289ns (58.451%))
+  Logic Levels:           13  (CARRY4=7 IBUF=1 LUT1=1 LUT2=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W3                                                0.000     0.000 f  B_0[14] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[14]
+    W3                   IBUF (Prop_ibuf_I_O)         0.956     0.956 f  B_0_IBUF[14]_inst/O
+                         net (fo=34, routed)          3.972     4.927    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[14]
+    SLICE_X6Y23          LUT2 (Prop_lut2_I0_O)        0.124     5.051 f  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma1/O
+                         net (fo=2, routed)           0.670     5.721    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma_sig
+    SLICE_X6Y24          LUT1 (Prop_lut1_I0_O)        0.124     5.845 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1/O
+                         net (fo=1, routed)           0.000     5.845    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_S[0]_O[3])
+                                                      0.608     6.453 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_CARRY4/O[3]
+                         net (fo=1, routed)           0.808     7.261    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[7]_7[3]
+    SLICE_X5Y24          LUT2 (Prop_lut2_I1_O)        0.307     7.568 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_i_1/O
+                         net (fo=1, routed)           0.000     7.568    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_i_1_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.969 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry/CO[3]
+                         net (fo=1, routed)           0.009     7.978    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_n_0
+    SLICE_X5Y25          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     8.291 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0/O[3]
+                         net (fo=1, routed)           0.804     9.095    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp5[7]
+    SLICE_X4Y26          LUT2 (Prop_lut2_I1_O)        0.306     9.401 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_i_3/O
+                         net (fo=1, routed)           0.000     9.401    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_i_3_n_0
+    SLICE_X4Y26          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.951 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     9.951    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_n_0
+    SLICE_X4Y27          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.285 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2/O[1]
+                         net (fo=3, routed)           1.027    11.312    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp9[13]
+    SLICE_X2Y27          LUT2 (Prop_lut2_I1_O)        0.303    11.615 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_i_4/O
+                         net (fo=1, routed)           0.000    11.615    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_i_4_n_0
+    SLICE_X2Y27          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.148 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    12.148    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_n_0
+    SLICE_X2Y28          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    12.471 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__4/O[1]
+                         net (fo=1, routed)           0.000    12.471    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[21]
+    SLICE_X2Y28          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][29]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 B_0[14]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][30]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.421ns  (logic 5.147ns (41.435%)  route 7.274ns (58.565%))
+  Logic Levels:           13  (CARRY4=7 IBUF=1 LUT1=1 LUT2=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W3                                                0.000     0.000 f  B_0[14] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[14]
+    W3                   IBUF (Prop_ibuf_I_O)         0.956     0.956 f  B_0_IBUF[14]_inst/O
+                         net (fo=34, routed)          3.972     4.927    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[14]
+    SLICE_X6Y23          LUT2 (Prop_lut2_I0_O)        0.124     5.051 f  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma1/O
+                         net (fo=2, routed)           0.670     5.721    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma_sig
+    SLICE_X6Y24          LUT1 (Prop_lut1_I0_O)        0.124     5.845 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1/O
+                         net (fo=1, routed)           0.000     5.845    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     6.358 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_CARRY4/CO[3]
+                         net (fo=1, routed)           0.009     6.367    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_cout[7]_3
+    SLICE_X6Y25          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     6.586 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[4].ppsub.stageN.muxcy0_CARRY4/O[0]
+                         net (fo=1, routed)           0.793     7.379    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[7]_7[4]
+    SLICE_X5Y25          LUT2 (Prop_lut2_I1_O)        0.295     7.674 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0_i_4/O
+                         net (fo=1, routed)           0.000     7.674    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0_i_4_n_0
+    SLICE_X5Y25          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     8.206 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.206    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0_n_0
+    SLICE_X5Y26          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     8.519 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__1/O[3]
+                         net (fo=1, routed)           0.804     9.323    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp5[11]
+    SLICE_X4Y27          LUT2 (Prop_lut2_I1_O)        0.306     9.629 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2_i_4/O
+                         net (fo=1, routed)           0.000     9.629    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2_i_4_n_0
+    SLICE_X4Y27          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.179 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.179    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2_n_0
+    SLICE_X4Y28          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.513 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__3/O[1]
+                         net (fo=3, routed)           1.027    11.540    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp9[17]
+    SLICE_X2Y28          LUT2 (Prop_lut2_I1_O)        0.303    11.843 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__4_i_3/O
+                         net (fo=1, routed)           0.000    11.843    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__4_i_3_n_0
+    SLICE_X2Y28          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578    12.421 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__4/O[2]
+                         net (fo=1, routed)           0.000    12.421    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[22]
+    SLICE_X2Y28          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][30]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 B_0[14]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][28]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.367ns  (logic 5.078ns (41.058%)  route 7.289ns (58.942%))
+  Logic Levels:           13  (CARRY4=7 IBUF=1 LUT1=1 LUT2=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W3                                                0.000     0.000 f  B_0[14] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[14]
+    W3                   IBUF (Prop_ibuf_I_O)         0.956     0.956 f  B_0_IBUF[14]_inst/O
+                         net (fo=34, routed)          3.972     4.927    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[14]
+    SLICE_X6Y23          LUT2 (Prop_lut2_I0_O)        0.124     5.051 f  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma1/O
+                         net (fo=2, routed)           0.670     5.721    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma_sig
+    SLICE_X6Y24          LUT1 (Prop_lut1_I0_O)        0.124     5.845 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1/O
+                         net (fo=1, routed)           0.000     5.845    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_S[0]_O[3])
+                                                      0.608     6.453 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_CARRY4/O[3]
+                         net (fo=1, routed)           0.808     7.261    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[7]_7[3]
+    SLICE_X5Y24          LUT2 (Prop_lut2_I1_O)        0.307     7.568 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_i_1/O
+                         net (fo=1, routed)           0.000     7.568    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_i_1_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.969 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry/CO[3]
+                         net (fo=1, routed)           0.009     7.978    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_n_0
+    SLICE_X5Y25          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     8.291 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0/O[3]
+                         net (fo=1, routed)           0.804     9.095    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp5[7]
+    SLICE_X4Y26          LUT2 (Prop_lut2_I1_O)        0.306     9.401 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_i_3/O
+                         net (fo=1, routed)           0.000     9.401    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_i_3_n_0
+    SLICE_X4Y26          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.951 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     9.951    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_n_0
+    SLICE_X4Y27          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.285 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2/O[1]
+                         net (fo=3, routed)           1.027    11.312    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp9[13]
+    SLICE_X2Y27          LUT2 (Prop_lut2_I1_O)        0.303    11.615 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_i_4/O
+                         net (fo=1, routed)           0.000    11.615    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_i_4_n_0
+    SLICE_X2Y27          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.148 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    12.148    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_n_0
+    SLICE_X2Y28          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.367 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__4/O[0]
+                         net (fo=1, routed)           0.000    12.367    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[20]
+    SLICE_X2Y28          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][28]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 B_0[14]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][27]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.258ns  (logic 4.969ns (40.533%)  route 7.289ns (59.467%))
+  Logic Levels:           12  (CARRY4=6 IBUF=1 LUT1=1 LUT2=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W3                                                0.000     0.000 f  B_0[14] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[14]
+    W3                   IBUF (Prop_ibuf_I_O)         0.956     0.956 f  B_0_IBUF[14]_inst/O
+                         net (fo=34, routed)          3.972     4.927    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[14]
+    SLICE_X6Y23          LUT2 (Prop_lut2_I0_O)        0.124     5.051 f  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma1/O
+                         net (fo=2, routed)           0.670     5.721    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma_sig
+    SLICE_X6Y24          LUT1 (Prop_lut1_I0_O)        0.124     5.845 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1/O
+                         net (fo=1, routed)           0.000     5.845    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_S[0]_O[3])
+                                                      0.608     6.453 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_CARRY4/O[3]
+                         net (fo=1, routed)           0.808     7.261    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[7]_7[3]
+    SLICE_X5Y24          LUT2 (Prop_lut2_I1_O)        0.307     7.568 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_i_1/O
+                         net (fo=1, routed)           0.000     7.568    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_i_1_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.969 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry/CO[3]
+                         net (fo=1, routed)           0.009     7.978    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_n_0
+    SLICE_X5Y25          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     8.291 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0/O[3]
+                         net (fo=1, routed)           0.804     9.095    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp5[7]
+    SLICE_X4Y26          LUT2 (Prop_lut2_I1_O)        0.306     9.401 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_i_3/O
+                         net (fo=1, routed)           0.000     9.401    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_i_3_n_0
+    SLICE_X4Y26          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.951 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     9.951    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_n_0
+    SLICE_X4Y27          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.285 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2/O[1]
+                         net (fo=3, routed)           1.027    11.312    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp9[13]
+    SLICE_X2Y27          LUT2 (Prop_lut2_I1_O)        0.303    11.615 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_i_4/O
+                         net (fo=1, routed)           0.000    11.615    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_i_4_n_0
+    SLICE_X2Y27          CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643    12.258 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3/O[3]
+                         net (fo=1, routed)           0.000    12.258    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[19]
+    SLICE_X2Y27          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][27]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 B_0[14]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][26]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.193ns  (logic 4.904ns (40.216%)  route 7.289ns (59.784%))
+  Logic Levels:           12  (CARRY4=6 IBUF=1 LUT1=1 LUT2=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W3                                                0.000     0.000 f  B_0[14] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[14]
+    W3                   IBUF (Prop_ibuf_I_O)         0.956     0.956 f  B_0_IBUF[14]_inst/O
+                         net (fo=34, routed)          3.972     4.927    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[14]
+    SLICE_X6Y23          LUT2 (Prop_lut2_I0_O)        0.124     5.051 f  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma1/O
+                         net (fo=2, routed)           0.670     5.721    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.ma_sig
+    SLICE_X6Y24          LUT1 (Prop_lut1_I0_O)        0.124     5.845 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1/O
+                         net (fo=1, routed)           0.000     5.845    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_i_1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_S[0]_O[3])
+                                                      0.608     6.453 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[7].carrychain[0].ppsub.stageLSB.muxcy1_CARRY4/O[3]
+                         net (fo=1, routed)           0.808     7.261    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[7]_7[3]
+    SLICE_X5Y24          LUT2 (Prop_lut2_I1_O)        0.307     7.568 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_i_1/O
+                         net (fo=1, routed)           0.000     7.568    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_i_1_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.969 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry/CO[3]
+                         net (fo=1, routed)           0.009     7.978    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry_n_0
+    SLICE_X5Y25          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     8.291 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__215_carry__0/O[3]
+                         net (fo=1, routed)           0.804     9.095    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp5[7]
+    SLICE_X4Y26          LUT2 (Prop_lut2_I1_O)        0.306     9.401 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_i_3/O
+                         net (fo=1, routed)           0.000     9.401    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_i_3_n_0
+    SLICE_X4Y26          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.951 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     9.951    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1_n_0
+    SLICE_X4Y27          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.285 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__2/O[1]
+                         net (fo=3, routed)           1.027    11.312    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp9[13]
+    SLICE_X2Y27          LUT2 (Prop_lut2_I1_O)        0.303    11.615 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_i_4/O
+                         net (fo=1, routed)           0.000    11.615    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3_i_4_n_0
+    SLICE_X2Y27          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578    12.193 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3/O[2]
+                         net (fo=1, routed)           0.000    12.193    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[18]
+    SLICE_X2Y27          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][26]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 B_0[8]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][25]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.070ns  (logic 5.298ns (43.891%)  route 6.772ns (56.109%))
+  Logic Levels:           14  (CARRY4=9 IBUF=1 LUT2=3 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W4                                                0.000     0.000 r  B_0[8] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[8]
+    W4                   IBUF (Prop_ibuf_I_O)         0.941     0.941 r  B_0_IBUF[8]_inst/O
+                         net (fo=19, routed)          3.690     4.631    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[8]
+    SLICE_X9Y23          LUT4 (Prop_lut4_I0_O)        0.124     4.755 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[1].ppadd.b_is_even.stageN.muxcy0_i_1/O
+                         net (fo=1, routed)           0.000     4.755    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[1].ppadd.b_is_even.stageN.lut_sig
+    SLICE_X9Y23          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.305 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[0].ppadd.b_is_even.stageLSB.muxcy00_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     5.305    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_cout[4]_3
+    SLICE_X9Y24          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.419 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[4].ppadd.b_is_even.stageN.muxcy0_CARRY4/CO[3]
+                         net (fo=1, routed)           0.009     5.428    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_cout[4]_7
+    SLICE_X9Y25          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.762 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[8].ppadd.b_is_even.stageN.muxcy0_CARRY4/O[1]
+                         net (fo=2, routed)           1.089     6.851    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[4]_4[9]
+    SLICE_X7Y24          LUT2 (Prop_lut2_I0_O)        0.303     7.154 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__0_i_1/O
+                         net (fo=1, routed)           0.000     7.154    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__0_i_1_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.555 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__0/CO[3]
+                         net (fo=1, routed)           0.009     7.564    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__0_n_0
+    SLICE_X7Y25          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     7.898 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__1/O[1]
+                         net (fo=2, routed)           1.022     8.920    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp3[9]
+    SLICE_X4Y25          LUT2 (Prop_lut2_I0_O)        0.303     9.223 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__0_i_1/O
+                         net (fo=1, routed)           0.000     9.223    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__0_i_1_n_0
+    SLICE_X4Y25          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.624 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     9.624    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__0_n_0
+    SLICE_X4Y26          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     9.958 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1/O[1]
+                         net (fo=1, routed)           0.953    10.911    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp9[9]
+    SLICE_X2Y26          LUT2 (Prop_lut2_I1_O)        0.303    11.214 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2_i_3/O
+                         net (fo=1, routed)           0.000    11.214    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2_i_3_n_0
+    SLICE_X2Y26          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    11.747 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.747    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2_n_0
+    SLICE_X2Y27          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    12.070 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3/O[1]
+                         net (fo=1, routed)           0.000    12.070    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[17]
+    SLICE_X2Y27          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][25]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 B_0[8]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][24]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.966ns  (logic 5.194ns (43.404%)  route 6.772ns (56.596%))
+  Logic Levels:           14  (CARRY4=9 IBUF=1 LUT2=3 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W4                                                0.000     0.000 r  B_0[8] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[8]
+    W4                   IBUF (Prop_ibuf_I_O)         0.941     0.941 r  B_0_IBUF[8]_inst/O
+                         net (fo=19, routed)          3.690     4.631    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[8]
+    SLICE_X9Y23          LUT4 (Prop_lut4_I0_O)        0.124     4.755 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[1].ppadd.b_is_even.stageN.muxcy0_i_1/O
+                         net (fo=1, routed)           0.000     4.755    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[1].ppadd.b_is_even.stageN.lut_sig
+    SLICE_X9Y23          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.305 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[0].ppadd.b_is_even.stageLSB.muxcy00_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     5.305    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_cout[4]_3
+    SLICE_X9Y24          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.419 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[4].ppadd.b_is_even.stageN.muxcy0_CARRY4/CO[3]
+                         net (fo=1, routed)           0.009     5.428    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_cout[4]_7
+    SLICE_X9Y25          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.762 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[4].carrychain[8].ppadd.b_is_even.stageN.muxcy0_CARRY4/O[1]
+                         net (fo=2, routed)           1.089     6.851    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[4]_4[9]
+    SLICE_X7Y24          LUT2 (Prop_lut2_I0_O)        0.303     7.154 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__0_i_1/O
+                         net (fo=1, routed)           0.000     7.154    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__0_i_1_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.555 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__0/CO[3]
+                         net (fo=1, routed)           0.009     7.564    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__0_n_0
+    SLICE_X7Y25          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     7.898 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__163_carry__1/O[1]
+                         net (fo=2, routed)           1.022     8.920    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp3[9]
+    SLICE_X4Y25          LUT2 (Prop_lut2_I0_O)        0.303     9.223 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__0_i_1/O
+                         net (fo=1, routed)           0.000     9.223    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__0_i_1_n_0
+    SLICE_X4Y25          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.624 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     9.624    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__0_n_0
+    SLICE_X4Y26          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     9.958 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__267_carry__1/O[1]
+                         net (fo=1, routed)           0.953    10.911    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp9[9]
+    SLICE_X2Y26          LUT2 (Prop_lut2_I1_O)        0.303    11.214 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2_i_3/O
+                         net (fo=1, routed)           0.000    11.214    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2_i_3_n_0
+    SLICE_X2Y26          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    11.747 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.747    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2_n_0
+    SLICE_X2Y27          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    11.966 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__3/O[0]
+                         net (fo=1, routed)           0.000    11.966    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[16]
+    SLICE_X2Y27          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][24]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 B_0[0]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][21]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.907ns  (logic 4.845ns (40.687%)  route 7.063ns (59.313%))
+  Logic Levels:           13  (CARRY4=8 IBUF=1 LUT2=3 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V7                                                0.000     0.000 r  B_0[0] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[0]
+    V7                   IBUF (Prop_ibuf_I_O)         0.928     0.928 r  B_0_IBUF[0]_inst/O
+                         net (fo=19, routed)          3.733     4.661    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[0]
+    SLICE_X7Y18          LUT4 (Prop_lut4_I0_O)        0.124     4.785 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[9].ppadd.b_is_even.stageN.muxcy0_i_1/O
+                         net (fo=1, routed)           0.000     4.785    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[9].ppadd.b_is_even.stageN.lut_sig
+    SLICE_X7Y18          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.335 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[8].ppadd.b_is_even.stageN.muxcy0_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     5.335    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_cout[0]_11
+    SLICE_X7Y19          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.669 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[12].ppadd.b_is_even.stageN.muxcy0_CARRY4/O[1]
+                         net (fo=2, routed)           0.899     6.567    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[0]_0[13]
+    SLICE_X8Y19          LUT2 (Prop_lut2_I0_O)        0.303     6.870 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__1_i_1/O
+                         net (fo=1, routed)           0.000     6.870    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__1_i_1_n_0
+    SLICE_X8Y19          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     7.246 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.246    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__1_n_0
+    SLICE_X8Y20          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.465 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__2/O[0]
+                         net (fo=2, routed)           1.211     8.676    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp[12]
+    SLICE_X3Y21          LUT2 (Prop_lut2_I0_O)        0.295     8.971 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__1_i_2/O
+                         net (fo=1, routed)           0.000     8.971    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__1_i_2_n_0
+    SLICE_X3Y21          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.369 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     9.369    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__1_n_0
+    SLICE_X3Y22          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     9.682 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__2/O[3]
+                         net (fo=2, routed)           1.220    10.902    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp7__0[15]
+    SLICE_X2Y25          LUT2 (Prop_lut2_I0_O)        0.306    11.208 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__1_i_1/O
+                         net (fo=1, routed)           0.000    11.208    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__1_i_1_n_0
+    SLICE_X2Y25          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.584 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.584    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__1_n_0
+    SLICE_X2Y26          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    11.907 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2/O[1]
+                         net (fo=1, routed)           0.000    11.907    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[13]
+    SLICE_X2Y26          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][21]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 B_0[0]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][23]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.899ns  (logic 4.837ns (40.647%)  route 7.063ns (59.353%))
+  Logic Levels:           13  (CARRY4=8 IBUF=1 LUT2=3 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V7                                                0.000     0.000 r  B_0[0] (IN)
+                         net (fo=0)                   0.000     0.000    B_0[0]
+    V7                   IBUF (Prop_ibuf_I_O)         0.928     0.928 r  B_0_IBUF[0]_inst/O
+                         net (fo=19, routed)          3.733     4.661    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/B[0]
+    SLICE_X7Y18          LUT4 (Prop_lut4_I0_O)        0.124     4.785 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[9].ppadd.b_is_even.stageN.muxcy0_i_1/O
+                         net (fo=1, routed)           0.000     4.785    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[9].ppadd.b_is_even.stageN.lut_sig
+    SLICE_X7Y18          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     5.335 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[8].ppadd.b_is_even.stageN.muxcy0_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     5.335    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_cout[0]_11
+    SLICE_X7Y19          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.669 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[12].ppadd.b_is_even.stageN.muxcy0_CARRY4/O[1]
+                         net (fo=2, routed)           0.899     6.567    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[0]_0[13]
+    SLICE_X8Y19          LUT2 (Prop_lut2_I0_O)        0.303     6.870 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__1_i_1/O
+                         net (fo=1, routed)           0.000     6.870    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__1_i_1_n_0
+    SLICE_X8Y19          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     7.246 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.246    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__1_n_0
+    SLICE_X8Y20          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.465 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry__2/O[0]
+                         net (fo=2, routed)           1.211     8.676    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp[12]
+    SLICE_X3Y21          LUT2 (Prop_lut2_I0_O)        0.295     8.971 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__1_i_2/O
+                         net (fo=1, routed)           0.000     8.971    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__1_i_2_n_0
+    SLICE_X3Y21          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     9.369 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     9.369    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__1_n_0
+    SLICE_X3Y22          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     9.682 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry__2/O[3]
+                         net (fo=2, routed)           1.220    10.902    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp7__0[15]
+    SLICE_X2Y25          LUT2 (Prop_lut2_I0_O)        0.306    11.208 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__1_i_1/O
+                         net (fo=1, routed)           0.000    11.208    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__1_i_1_n_0
+    SLICE_X2Y25          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.584 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.584    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__1_n_0
+    SLICE_X2Y26          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    11.899 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__325_carry__2/O[3]
+                         net (fo=1, routed)           0.000    11.899    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp11[15]
+    SLICE_X2Y26          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][23]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 A_0[0]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.046ns  (logic 0.275ns (26.334%)  route 0.771ns (73.666%))
+  Logic Levels:           3  (CARRY4=1 IBUF=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U14                                               0.000     0.000 r  A_0[0] (IN)
+                         net (fo=0)                   0.000     0.000    A_0[0]
+    U14                  IBUF (Prop_ibuf_I_O)         0.165     0.165 r  A_0_IBUF[0]_inst/O
+                         net (fo=30, routed)          0.771     0.936    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/A[0]
+    SLICE_X7Y16          LUT4 (Prop_lut4_I3_O)        0.045     0.981 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[1].ppadd.b_is_even.stageN.muxcy0_i_1/O
+                         net (fo=1, routed)           0.000     0.981    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[1].ppadd.b_is_even.stageN.lut_sig
+    SLICE_X7Y16          CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.065     1.046 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[0].ppadd.b_is_even.stageLSB.muxcy00_CARRY4/O[1]
+                         net (fo=1, routed)           0.000     1.046    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[0]_0[1]
+    SLICE_X7Y16          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 A_0[0]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.052ns  (logic 0.280ns (26.659%)  route 0.772ns (73.341%))
+  Logic Levels:           3  (CARRY4=1 IBUF=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U14                                               0.000     0.000 r  A_0[0] (IN)
+                         net (fo=0)                   0.000     0.000    A_0[0]
+    U14                  IBUF (Prop_ibuf_I_O)         0.165     0.165 r  A_0_IBUF[0]_inst/O
+                         net (fo=30, routed)          0.772     0.937    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/A[0]
+    SLICE_X7Y16          LUT2 (Prop_lut2_I0_O)        0.045     0.982 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[0].ppadd.b_is_even.stageLSB.muxcy00_i_1/O
+                         net (fo=1, routed)           0.000     0.982    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[0].ppadd.b_is_even.stageLSB.lut_sig
+    SLICE_X7Y16          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     1.052 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[0].ppadd.b_is_even.stageLSB.muxcy00_CARRY4/O[0]
+                         net (fo=1, routed)           0.000     1.052    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[0]_0[0]
+    SLICE_X7Y16          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 A_0[1]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.285ns  (logic 0.442ns (34.411%)  route 0.843ns (65.589%))
+  Logic Levels:           5  (CARRY4=2 IBUF=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V14                                               0.000     0.000 r  A_0[1] (IN)
+                         net (fo=0)                   0.000     0.000    A_0[1]
+    V14                  IBUF (Prop_ibuf_I_O)         0.160     0.160 r  A_0_IBUF[1]_inst/O
+                         net (fo=24, routed)          0.725     0.885    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/A[1]
+    SLICE_X4Y19          LUT4 (Prop_lut4_I1_O)        0.045     0.930 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[2].carrychain[1].ppadd.b_is_even.stageN.muxcy0_i_1/O
+                         net (fo=1, routed)           0.000     0.930    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[2].carrychain[1].ppadd.b_is_even.stageN.lut_sig
+    SLICE_X4Y19          CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.065     0.995 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[2].carrychain[0].ppadd.b_is_even.stageLSB.muxcy00_CARRY4/O[1]
+                         net (fo=1, routed)           0.118     1.113    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[2]_2[1]
+    SLICE_X3Y19          LUT2 (Prop_lut2_I1_O)        0.107     1.220 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry_i_3/O
+                         net (fo=1, routed)           0.000     1.220    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry_i_3_n_0
+    SLICE_X3Y19          CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.065     1.285 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry/O[1]
+                         net (fo=1, routed)           0.000     1.285    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp7[1]
+    SLICE_X3Y19          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 A_0[1]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.372ns  (logic 0.529ns (38.571%)  route 0.843ns (61.429%))
+  Logic Levels:           5  (CARRY4=2 IBUF=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V14                                               0.000     0.000 r  A_0[1] (IN)
+                         net (fo=0)                   0.000     0.000    A_0[1]
+    V14                  IBUF (Prop_ibuf_I_O)         0.160     0.160 r  A_0_IBUF[1]_inst/O
+                         net (fo=24, routed)          0.725     0.885    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/A[1]
+    SLICE_X4Y19          LUT4 (Prop_lut4_I1_O)        0.045     0.930 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[2].carrychain[1].ppadd.b_is_even.stageN.muxcy0_i_1/O
+                         net (fo=1, routed)           0.000     0.930    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[2].carrychain[1].ppadd.b_is_even.stageN.lut_sig
+    SLICE_X4Y19          CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.065     0.995 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[2].carrychain[0].ppadd.b_is_even.stageLSB.muxcy00_CARRY4/O[1]
+                         net (fo=1, routed)           0.118     1.113    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[2]_2[1]
+    SLICE_X3Y19          LUT2 (Prop_lut2_I1_O)        0.107     1.220 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry_i_3/O
+                         net (fo=1, routed)           0.000     1.220    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry_i_3_n_0
+    SLICE_X3Y19          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.152     1.372 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry/O[2]
+                         net (fo=1, routed)           0.000     1.372    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp7[2]
+    SLICE_X3Y19          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 A_0[1]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.392ns  (logic 0.549ns (39.454%)  route 0.843ns (60.546%))
+  Logic Levels:           5  (CARRY4=2 IBUF=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V14                                               0.000     0.000 r  A_0[1] (IN)
+                         net (fo=0)                   0.000     0.000    A_0[1]
+    V14                  IBUF (Prop_ibuf_I_O)         0.160     0.160 r  A_0_IBUF[1]_inst/O
+                         net (fo=24, routed)          0.725     0.885    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/A[1]
+    SLICE_X4Y19          LUT4 (Prop_lut4_I1_O)        0.045     0.930 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[2].carrychain[1].ppadd.b_is_even.stageN.muxcy0_i_1/O
+                         net (fo=1, routed)           0.000     0.930    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[2].carrychain[1].ppadd.b_is_even.stageN.lut_sig
+    SLICE_X4Y19          CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.065     0.995 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[2].carrychain[0].ppadd.b_is_even.stageLSB.muxcy00_CARRY4/O[1]
+                         net (fo=1, routed)           0.118     1.113    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[2]_2[1]
+    SLICE_X3Y19          LUT2 (Prop_lut2_I1_O)        0.107     1.220 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry_i_3/O
+                         net (fo=1, routed)           0.000     1.220    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry_i_3_n_0
+    SLICE_X3Y19          CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.172     1.392 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__103_carry/O[3]
+                         net (fo=1, routed)           0.000     1.392    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp7[3]
+    SLICE_X3Y19          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 A_0[3]
+                            (input port)
+  Destination:            multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.452ns  (logic 0.448ns (30.869%)  route 1.004ns (69.131%))
+  Logic Levels:           5  (CARRY4=2 IBUF=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U16                                               0.000     0.000 r  A_0[3] (IN)
+                         net (fo=0)                   0.000     0.000    A_0[3]
+    U16                  IBUF (Prop_ibuf_I_O)         0.164     0.164 r  A_0_IBUF[3]_inst/O
+                         net (fo=24, routed)          0.642     0.806    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/A[3]
+    SLICE_X7Y16          LUT4 (Prop_lut4_I1_O)        0.045     0.851 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[3].ppadd.b_is_even.stageN.muxcy0_i_1/O
+                         net (fo=1, routed)           0.000     0.851    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[3].ppadd.b_is_even.stageN.lut_sig
+    SLICE_X7Y16          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.063     0.914 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.ppgen[0].carrychain[0].ppadd.b_is_even.stageLSB.muxcy00_CARRY4/O[3]
+                         net (fo=2, routed)           0.362     1.276    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/pp_out[0]_0[3]
+    SLICE_X8Y17          LUT2 (Prop_lut2_I0_O)        0.110     1.386 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry_i_3/O
+                         net (fo=1, routed)           0.000     1.386    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry_i_3_n_0
+    SLICE_X8Y17          CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.066     1.452 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp_carry/O[1]
+                         net (fo=1, routed)           0.000     1.452    multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/plusOp__0[1]
+    SLICE_X8Y17          FDRE                                         r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            P_0[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.578ns  (logic 1.252ns (79.343%)  route 0.326ns (20.657%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y19          FDRE                         0.000     0.000 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][4]/C
+    SLICE_X3Y19          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][4]/Q
+                         net (fo=1, routed)           0.326     0.467    P_0_OBUF[4]
+    U19                  OBUF (Prop_obuf_I_O)         1.111     1.578 r  P_0_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     1.578    P_0[4]
+    U19                                                               r  P_0[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            P_0[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.582ns  (logic 1.257ns (79.465%)  route 0.325ns (20.535%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y16          FDRE                         0.000     0.000 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][1]/C
+    SLICE_X7Y16          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][1]/Q
+                         net (fo=1, routed)           0.325     0.466    P_0_OBUF[1]
+    W19                  OBUF (Prop_obuf_I_O)         1.116     1.582 r  P_0_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     1.582    P_0[1]
+    W19                                                               r  P_0[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            P_0[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.584ns  (logic 1.257ns (79.376%)  route 0.327ns (20.624%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y16          FDRE                         0.000     0.000 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][0]/C
+    SLICE_X7Y16          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][0]/Q
+                         net (fo=1, routed)           0.327     0.468    P_0_OBUF[0]
+    T17                  OBUF (Prop_obuf_I_O)         1.116     1.584 r  P_0_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     1.584    P_0[0]
+    T17                                                               r  P_0[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][8]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            P_0[8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.593ns  (logic 1.267ns (79.531%)  route 0.326ns (20.469%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y23          FDRE                         0.000     0.000 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][8]/C
+    SLICE_X2Y23          FDRE (Prop_fdre_C_Q)         0.164     0.164 r  multiplier_16_bit_lut_i/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][8]/Q
+                         net (fo=1, routed)           0.326     0.490    P_0_OBUF[8]
+    N17                  OBUF (Prop_obuf_I_O)         1.103     1.593 r  P_0_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     1.593    P_0[8]
+    N17                                                               r  P_0[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
