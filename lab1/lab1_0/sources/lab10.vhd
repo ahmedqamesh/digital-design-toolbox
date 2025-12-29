@@ -2,6 +2,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+-- ===========================================================================
+--  File: lab11_0.vhd
+--  Author: Ahmed Qamesh
+-- ===========================================================================
+--  Description:
+--  This module introduces some basic gates operations
+--
+-- ===========================================================================
+
 
 ENTITY basic_gates IS
      PORT (a, b: IN STD_LOGIC;
