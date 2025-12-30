@@ -1,5 +1,4 @@
-# VHDL Digital Design Labs
-
+#Lab 4 – Shifter
 This repository contains a collection of VHDL laboratory exercises focused on digital arithmetic, logic operations, and FPGA-oriented design.  
 All designs are written in **VHDL** and are intended for **FPGA implementation**, using switches (sliders) as inputs and LEDs or seven-segment displays as outputs.
 
@@ -31,7 +30,7 @@ Summator of a **7-bit signed integer** and a constant value (**cnst = 3**).
 
 ---
 
-## Lab 43 – Cyclic Left Shifter (2 bits)
+## Lab 43 – Cyclic Left   (2 bits)
 
 **File:** `lab43.vhd`  
 **Description:**  

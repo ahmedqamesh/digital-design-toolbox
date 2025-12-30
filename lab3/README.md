@@ -1,8 +1,10 @@
-# FPGA Lab Exercise – Multiplexers, Demultiplexers, Switches, and 7-Segment Display
+# Lab 3 – Multiplexers, Demultiplexers, Switches, and 7-Segment Display
+This lab covers binary counters, bidirectional counters, clock dividers, and a ring counter with ~1 s period.  
+All designs use **VHDL** and are intended for **FPGA implementation**, with buttons/switches as inputs and LEDs as outputs.
 
 ---
 
-## Overview
+# Overview
 This lab exercise implements and tests various digital components on the **Basys3 FPGA board**, including:
 
 1. **4-to-1 Multiplexer (lab31)** – selects one of 4 single-bit inputs to a single output LED.
@@ -13,33 +15,31 @@ This lab exercise implements and tests various digital components on the **Basys
 
 ---
 
-## Task Details
-
-### Lab31 – 4-to-1 Multiplexer
+## Lab31 – 4-to-1 Multiplexer
 - **Inputs:** 4 buttons (`din`) and 2 switches (`addr`)
 - **Output:** 1 LED (`dout`)
 - **Function:** Selects which button is routed to the LED based on the address.
 - **Notes:** Implemented using a process with a `case` statement.
 
-### Lab32 – 1-to-4 Demultiplexer
+## Lab32 – 1-to-4 Demultiplexer
 - **Input:** 1 button (`din`) and 2 switches (`addr`)
 - **Outputs:** 4 LEDs (`dout`)
 - **Function:** Routes the single button input to the selected LED based on the address.
 - **Notes:** All other outputs are set to `'0'`.
 
-### Lab33 – 4×4 Switch
+## Lab33 – 4×4 Switch
 - **Inputs:** 4 buttons (`din`), 2 sets of 2-bit switches (`addr1`, `addr2`)
 - **Outputs:** 4 LEDs (`dout`)
 - **Function:** Routes one of the four buttons to one of the four LEDs based on two addresses.
 - **Implementation:** Instantiates `lab31` as a multiplexer and `lab32` as a demultiplexer; uses internal signal for connection.
 
-### Lab34 – 4×1 Multiplexer to Seven-Segment Display
+## Lab34 – 4×1 Multiplexer to Seven-Segment Display
 - **Inputs:** 4 4-bit switches (`din0`, `din1`, `din2`, `din3`) and 2-bit address (`addr`)
 - **Outputs:** 7-segment signals (`dout`) and anode control (`an`)
 - **Function:** Displays the selected 4-bit input on the rightmost digit of the 7-segment display.
 - **Notes:** Uses a function to convert binary values to 7-segment encoding (supports 0–F).
 
-### Testbench – lab32
+## Testbench – lab32
 - **Purpose:** Simulates the demultiplexer.
 - **Data Input:** Alternating `101010...` sequence.
 - **Address Input:** Cycles `"00"`, `"01"`, `"10"`, `"11"` continuously.
