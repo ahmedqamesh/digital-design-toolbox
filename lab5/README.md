@@ -1,14 +1,14 @@
-# VHDL Digital Design Labs
+## Lab 5 – Synchronous digital devices, Signal raies. FlipFLops and latches. Registers 
 
-This repository contains a collection of VHDL laboratory exercises focused on digital logic and FPGA-oriented design.  
+This repository contains a collection of VHDL laboratory exercises focused on digital logic and FPGA-oriented design. 
 All designs are written in **VHDL** and are intended for **FPGA implementation**, using switches (sliders) as inputs and LEDs as outputs.
 
 ---
 
 ## Lab 51 – JK Flip-Flop with Enable
 
-**File:** `lab51_jk_ff.vhd`  
-**Description:**  
+**File:** `lab51_jk_ff.vhd` 
+**Description:** 
 JK flip-flop with enable, asynchronous clear, and preset inputs.
 
 - Inputs:
@@ -21,8 +21,8 @@ JK flip-flop with enable, asynchronous clear, and preset inputs.
 
 ## Lab 52 – 16-bit Cyclic Shift Register
 
-**File:** `lab52_shift_reg.vhd`  
-**Description:**  
+**File:** `lab52_shift_reg.vhd` 
+**Description:** 
 16-bit right cyclic shift register with synchronous reset.
 
 - Inputs:
