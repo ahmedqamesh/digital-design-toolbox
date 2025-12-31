@@ -2,8 +2,11 @@
 
 **File:** `lab81_conv_encoder_fsm.vhd`  
 **Description:**  
-Convolutional encoder for (7,5) code implemented using a finite state machine (FSM).
+
 ![lab81](https://github.com/ahmedqamesh/digital-design-toolbox/blob/main/assets/lab81.png)
+
+Convolutional encoder for (7,5) code implemented using a finite state machine (FSM).
+
 - Inputs:
   - `Reset`
   - `Clock`
