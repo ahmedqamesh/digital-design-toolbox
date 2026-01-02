@@ -1,6 +1,14 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 USE ieee.std_logic_arith.all;
+-- ===========================================================================
+--  File: lab62.vhd
+--  Author: Ahmed Qamesh
+--  Date: 31/12/2025
+-- ===========================================================================
+--  Description: Simple Counter
+-- ===========================================================================
+
 
 entity lab62 is
     Port ( clk : in STD_LOGIC;
