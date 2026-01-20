@@ -1,4 +1,4 @@
-## About the Project 
+## Lab 13_1
 ## Concepts to learn
 
 Debugging of internal FPGA signals. Debugging strategies and what to debug
@@ -19,9 +19,7 @@ Debugging of internal FPGA signals. Debugging strategies and what to debug
 │ ├─ clocks.vhd          	-- pin assignments for the clk
 │ └─ ports.xdc   		-- pin assignments for the board (LED)
 │
-├─ prj/				-- project folder for vivado files
-│ 
-├─ rtl/
+├─ sources/
 │ ├─ blinky.vhd          	-- free‑running counter
 │ ├─ shift_led_right.vhd      -- Right logical shift register – triggered on the pulse
 │ └─ shift_led_left.vhd       -- Left logical shift register – triggered on the pulse
