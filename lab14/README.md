@@ -1,4 +1,4 @@
-## Lab 14
+## Lab 14 - MultiBoot Mechanism
 # The idea of MultiBooting
 The FPGA application triggers a MultiBoot operation, causing the FPGA to reconfigure from a different bitstream. The fallback functionality allows for system recovery from any failure to load the MultiBoot image, and loads the golden image.<br>
 The solution involves a flash memory that has a reserved areas to store these components:

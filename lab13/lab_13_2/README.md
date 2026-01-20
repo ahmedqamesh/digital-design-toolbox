@@ -13,7 +13,7 @@ Vivado will generate a warning that this step cannot be undone.<br>
 
 * The project now is a DFX project, which means that it allows for the reconfiguration of modules within an active design. 
 
-3. Define the top module using a block design (mopshub_reconfig) .<br>
+3. Define the top module using a block design (top_reconfig) .<br>
 a. An HDL wrapper and its output product must be generated.<p align="center"><img src="https://github.com/ahmedqamesh/local_workspace/assets/8536649/b4715e33-d088-4c76-9b6c-3b7cea37cec5"></p>
 b. Select the (RM) module (**shift_led_left**) within the block designand right click. Select **Create hierarchicay** (we call it here **partition**).<br>
 c. Validate the block design.<br>
@@ -62,12 +62,12 @@ e. Click **Finish**<br>
 10. Implement the Design and Generate the bitstream (Vivado tool will generate several bitstreams, in this example 
 <pre><code>
 #left_reg partition 
-mopshub_reconfig.runs/impl_1/mopshub_reconfig_bd_i_partition_shift_left_inst_0_partial.bit #only the dynamic part
-mopshub_reconfig.runs/impl_1/mopshub_reconfig_bd_wrapper.bit # Static and dynamic part
+top_reconfig.runs/impl_1/top_reconfig_bd_i_partition_shift_left_inst_0_partial.bit #only the dynamic part
+top_reconfig.runs/impl_1/top_reconfig_bd_wrapper.bit # Static and dynamic part
 #right_reg partition
-mopshub_reconfig.runs/child_0_impl_1/mopshub_reconfig_bd_i_partition_shift_right_inst_0_partial.bit
-mopshub_reconfig.runs/child_0_impl_1/mopshub_reconfig_bd_wrapper.bit
+top_reconfig.runs/child_0_impl_1/top_reconfig_bd_i_partition_shift_right_inst_0_partial.bit
+top_reconfig.runs/child_0_impl_1/top_reconfig_bd_wrapper.bit
 #Empty partition
-mopshub_reconfig.runs/child_1_impl_1/mopshub_reconfig_bd_i_partition_greybox_partial.bit
-mopshub_reconfig.runs/child_1_impl_1/mopshub_reconfig_bd_wrapper.bit
+top_reconfig.runs/child_1_impl_1/top_reconfig_bd_i_partition_greybox_partial.bit
+top_reconfig.runs/child_1_impl_1/top_reconfig_bd_wrapper.bit
 </code></pre>As seen, each dynamic bitstream is accompined by another full bitstream that holds both
