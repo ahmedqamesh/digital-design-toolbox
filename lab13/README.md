@@ -1,8 +1,8 @@
-# Lab 6 – Partial Reconfiguration
+# Lab 13 – Partial Reconfiguration
 Partial Reconfiguration (partial reconfiguration) is becoming more and more common in today's FPGA applications. This tutorial is an example to illustrate the operation process of partial reconfiguration.<br>
 The vivado version used here is 2020.2.<br> 
 1. Decide which module you need to treat as a **Reconfiguration Module** and replace it with **another module**.
-* **In our example**: we replaces **_shif_led_right_** (RM) with **_shif_led_left_**.
+* **In our example**: we replaces **_shift_led_right_** (RM) with **_shift_led_left_**.
 > **A Reconfigurable Module (RM)** is the netlist or HDL description that is implemented within a reconfigurable partition.
 2. Start the configuration of Partial Reconfiguration<br>
 a. First open the project and add one of the Reconfiguration Modules to the project. <br>
@@ -15,7 +15,7 @@ Vivado will generate a warning that this step cannot be undone.<br>
 
 3. Define the top module using a block design (mopshub_reconfig) .<br>
 a. An HDL wrapper and its output product must be generated.<p align="center"><img src="https://github.com/ahmedqamesh/local_workspace/assets/8536649/b4715e33-d088-4c76-9b6c-3b7cea37cec5"></p>
-b. Select the (RM) module (**shif_led_left**) within the block designand right click. Select **Create hierarchicay** (we call it here **partition**).<br>
+b. Select the (RM) module (**shift_led_left**) within the block designand right click. Select **Create hierarchicay** (we call it here **partition**).<br>
 c. Validate the block design.<br>
 d. Select the hierarchical block and right click. Select **Create Block Design Container** (we call it here **shift_left**).<br> 
 * This will convert the hierarchical block into a Block Design Container.<br> 
