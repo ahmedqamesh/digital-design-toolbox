@@ -70,4 +70,21 @@ top_reconfig.runs/child_0_impl_1/top_reconfig_bd_wrapper.bit
 #Empty partition
 top_reconfig.runs/child_1_impl_1/top_reconfig_bd_i_partition_greybox_partial.bit
 top_reconfig.runs/child_1_impl_1/top_reconfig_bd_wrapper.bit
-</code></pre>As seen, each dynamic bitstream is accompined by another full bitstream that holds both
+</code></pre>
+As seen, each dynamic bitstream is accompined by another full bitstream that holds both
+
+##Notes
+* ecc/crc frame_ecce2 adding it to the design
+* crcerror/eccerror correct_and_continue does it still raise the flag?
+* continious scrubbing of external flash
+* icape2 seu hardness?
+* icape2 iprog/alternatives? 
+* internal configuration register access through different primitives?
+* simulate an SEU on the FPGA configuration memory (with icap maybe?)
+* partial reconfiguration of the mopshub design
+* decoupling ip dfx but no triplication?
+
+# Useful Xilinx Documentation:
+* https://docs.xilinx.com/r/en-US/ug470_7Series_Config/7-Series-FPGAs-Configuration-User-Guide
+* https://docs.xilinx.com/r/en-US/ug953-vivado-7series-libraries/
+
