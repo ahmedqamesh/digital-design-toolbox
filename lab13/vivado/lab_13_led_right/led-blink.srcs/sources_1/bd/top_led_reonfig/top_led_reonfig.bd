@@ -1,0 +1,526 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../led-blink.gen/sources_1/bd/top_led_reonfig",
+      "name": "top_led_reonfig",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2"
+    },
+    "design_tree": {
+      "decoupling_0": "",
+      "uart_interface_0": "",
+      "icap_sm_0": "",
+      "interface_0": "",
+      "startupe2_primitve_0": "",
+      "protocol_unit_0": "",
+      "clk_wiz_0": "",
+      "shift_led_left_0": "",
+      "xlconstant_0": ""
+    },
+    "ports": {
+      "rstn": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "sysclk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "uart_txd_in": {
+        "direction": "I"
+      },
+      "uart_rxd_out": {
+        "direction": "O"
+      },
+      "LED": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      }
+    },
+    "components": {
+      "decoupling_0": {
+        "vlnv": "xilinx.com:module_ref:decoupling:1.0",
+        "xci_name": "top_led_reonfig_decoupling_0_2",
+        "xci_path": "ip/top_led_reonfig_decoupling_0_2/top_led_reonfig_decoupling_0_2.xci",
+        "inst_hier_path": "decoupling_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decoupling",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "enable": {
+            "direction": "I"
+          },
+          "led": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "ledd": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clkd": {
+            "direction": "O"
+          },
+          "rstnd": {
+            "direction": "O"
+          }
+        }
+      },
+      "uart_interface_0": {
+        "vlnv": "xilinx.com:module_ref:uart_interface:1.0",
+        "xci_name": "top_led_reonfig_uart_interface_0_2",
+        "xci_path": "ip/top_led_reonfig_uart_interface_0_2/top_led_reonfig_uart_interface_0_2.xci",
+        "inst_hier_path": "uart_interface_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uart_interface",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "uart_txd_in": {
+            "direction": "I"
+          },
+          "new_data_tx": {
+            "direction": "I"
+          },
+          "data_tx": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "uart_rxd_out": {
+            "direction": "O"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "new_data_rx": {
+            "direction": "O"
+          },
+          "data_rx": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "icap_sm_0": {
+        "vlnv": "xilinx.com:module_ref:icap_sm:1.0",
+        "xci_name": "top_led_reonfig_icap_sm_0_2",
+        "xci_path": "ip/top_led_reonfig_icap_sm_0_2/top_led_reonfig_icap_sm_0_2.xci",
+        "inst_hier_path": "icap_sm_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "icap_sm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "write_req": {
+            "direction": "I"
+          },
+          "read_req": {
+            "direction": "I"
+          },
+          "icap_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_ready": {
+            "direction": "O"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "icap_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "interface_0": {
+        "vlnv": "xilinx.com:module_ref:interface:1.0",
+        "xci_name": "top_led_reonfig_interface_0_2",
+        "xci_path": "ip/top_led_reonfig_interface_0_2/top_led_reonfig_interface_0_2.xci",
+        "inst_hier_path": "interface_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "interface",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "wready": {
+            "direction": "I"
+          },
+          "address": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "wrdata": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "icap_busy": {
+            "direction": "I"
+          },
+          "write_req": {
+            "direction": "O"
+          },
+          "read_req": {
+            "direction": "O"
+          },
+          "icap_wrdata": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "startupe2_primitve_0": {
+        "vlnv": "xilinx.com:module_ref:startupe2_primitve:1.0",
+        "xci_name": "top_led_reonfig_startupe2_primitve_0_2",
+        "xci_path": "ip/top_led_reonfig_startupe2_primitve_0_2/top_led_reonfig_startupe2_primitve_0_2.xci",
+        "inst_hier_path": "startupe2_primitve_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "startupe2_primitve",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "EOS": {
+            "direction": "O"
+          }
+        }
+      },
+      "protocol_unit_0": {
+        "vlnv": "xilinx.com:module_ref:protocol_unit:1.0",
+        "xci_name": "top_led_reonfig_protocol_unit_0_2",
+        "xci_path": "ip/top_led_reonfig_protocol_unit_0_2/top_led_reonfig_protocol_unit_0_2.xci",
+        "inst_hier_path": "protocol_unit_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "protocol_unit",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "data_rx": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "new_data_rx": {
+            "direction": "I"
+          },
+          "address": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "data_received": {
+            "direction": "O"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "top_led_reonfig_clk_wiz_0_1",
+        "xci_path": "ip/top_led_reonfig_clk_wiz_0_1/top_led_reonfig_clk_wiz_0_1.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "117.368"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "88.161"
+          },
+          "CLKOUT1_REQUESTED_PHASE": {
+            "value": "11.52"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "11.750"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "11.750"
+          },
+          "MMCM_CLKOUT0_PHASE": {
+            "value": "11.489"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "shift_led_left_0": {
+        "vlnv": "xilinx.com:module_ref:shift_led_left:1.0",
+        "xci_name": "top_led_reonfig_shift_led_left_0_0",
+        "xci_path": "ip/top_led_reonfig_shift_led_left_0_0/top_led_reonfig_shift_led_left_0_0.xci",
+        "inst_hier_path": "shift_led_left_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "shift_led_left",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "enable_shift": {
+            "direction": "I"
+          },
+          "led_o": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "top_led_reonfig_xlconstant_0_0",
+        "xci_path": "ip/top_led_reonfig_xlconstant_0_0/top_led_reonfig_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "clk_wiz_0/clk",
+          "uart_interface_0/clk",
+          "protocol_unit_0/clk",
+          "icap_sm_0/clk",
+          "interface_0/clk",
+          "decoupling_0/clk"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "sysclk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "decoupling_0_ledd": {
+        "ports": [
+          "decoupling_0/ledd",
+          "LED"
+        ]
+      },
+      "icap_sm_0_busy": {
+        "ports": [
+          "icap_sm_0/busy",
+          "interface_0/icap_busy"
+        ]
+      },
+      "interface_0_icap_wrdata": {
+        "ports": [
+          "interface_0/icap_wrdata",
+          "icap_sm_0/icap_in"
+        ]
+      },
+      "interface_0_read_req": {
+        "ports": [
+          "interface_0/read_req",
+          "icap_sm_0/read_req"
+        ]
+      },
+      "interface_0_write_req": {
+        "ports": [
+          "interface_0/write_req",
+          "icap_sm_0/write_req"
+        ]
+      },
+      "protocol_unit_0_address": {
+        "ports": [
+          "protocol_unit_0/address",
+          "interface_0/address"
+        ]
+      },
+      "protocol_unit_0_data": {
+        "ports": [
+          "protocol_unit_0/data",
+          "interface_0/wrdata"
+        ]
+      },
+      "protocol_unit_0_data_received": {
+        "ports": [
+          "protocol_unit_0/data_received",
+          "interface_0/wready"
+        ]
+      },
+      "rstn_0_1": {
+        "ports": [
+          "rstn",
+          "protocol_unit_0/rstn",
+          "uart_interface_0/rstn",
+          "icap_sm_0/rstn",
+          "interface_0/rstn",
+          "decoupling_0/rstn"
+        ]
+      },
+      "shift_led_left_0_led_o": {
+        "ports": [
+          "shift_led_left_0/led_o",
+          "decoupling_0/led"
+        ]
+      },
+      "startupe2_primitve_0_EOS": {
+        "ports": [
+          "startupe2_primitve_0/EOS",
+          "decoupling_0/enable"
+        ]
+      },
+      "uart_interface_0_data_rx": {
+        "ports": [
+          "uart_interface_0/data_rx",
+          "protocol_unit_0/data_rx"
+        ]
+      },
+      "uart_interface_0_new_data_rx": {
+        "ports": [
+          "uart_interface_0/new_data_rx",
+          "protocol_unit_0/new_data_rx"
+        ]
+      },
+      "uart_interface_0_uart_rxd_out": {
+        "ports": [
+          "uart_interface_0/uart_rxd_out",
+          "uart_rxd_out"
+        ]
+      },
+      "uart_txd_in_0_1": {
+        "ports": [
+          "uart_txd_in",
+          "uart_interface_0/uart_txd_in"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "shift_led_left_0/enable_shift"
+        ]
+      }
+    }
+  }
+}
