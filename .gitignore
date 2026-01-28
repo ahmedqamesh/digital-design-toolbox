@@ -8,6 +8,8 @@ lab*/lab*/check_*/
 lab*/lab*/vivado/lab_13_proj/*
 !lab*/lab*/vivado/
 !lab*/lab*/vivado
+lab*/vivado/*
+!lab*/vivado/
 # Remove the contents in the /tcl_scripts/output_dir/
 /tcl_scripts/output_dir/*
 !/tcl_scripts/
