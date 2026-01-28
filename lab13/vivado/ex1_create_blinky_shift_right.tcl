@@ -1,6 +1,7 @@
 # --------------------------------------------------------------------
 # 1.  Define directories (relative to where you launch the script)
 # --------------------------------------------------------------------
+
 set script_dir [file dirname [info script]]          ;# Tcl script location (/vivado)
 set origin_dir [file normalize "$script_dir/.."]    ;# project directory (projectlab_13_2)
 
