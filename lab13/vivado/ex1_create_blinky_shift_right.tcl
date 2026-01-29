@@ -1,6 +1,14 @@
 # --------------------------------------------------------------------
 # 1.  Define directories (relative to where you launch the script)
 # --------------------------------------------------------------------
+# Syntheis the design 
+# Open synthesised design 
+# A message will appear telling that "No active configuration defined"
+# Choose "Start WIzard" >> "automatically create configuration"
+# We are interested in the left_shift_led, so  we will choose that.
+# Choose "automatically create configuration runs">> Next
+# NOw check the netlist by "Open synthesised design "
+
 
 set script_dir [file dirname [info script]]          ;# Tcl script location (/vivado)
 set origin_dir [file normalize "$script_dir/.."]    ;# project directory (projectlab_13_2)
@@ -92,7 +100,8 @@ if {[file exists "$sim_dir"]} {
 if {[file exists "$cfg_dir"]} {
     add_files -fileset constrs_1 [glob -nocomplain $cfg_dir/*.xdc]
 }
-
+set_property is_enabled false [get_files  $cfg_dir/Nexys-4-DDR-ports.xdc]
+set_property is_enabled false [get_files  $cfg_dir/Arty7-ports.xdc]
 # --------------------------------------------------------------------
 # 5.  Run the design flow
 # --------------------------------------------------------------------

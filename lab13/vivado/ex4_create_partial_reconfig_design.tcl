@@ -4,10 +4,14 @@
 # ============================================================
 
 # 1. Generate the Reconfig Wrapper
-set led_reonfig_design_name "top_led_reonfig"
-create_bd_design $led_reonfig_design_name
-current_bd_design [get_bd_designs $led_reonfig_design_name.bd]
-make_wrapper -files [get_files $led_reonfig_design_name.bd] -top -import
+
+set script_dir [file dirname [info script]]          ;# Tcl script location (/vivado)
+set origin_dir [file normalize "$script_dir/.."]    ;# project directory (projectlab_13_2)
+set cfg_dir       "$origin_dir/cfg"
+set led_reconfig_design_name "top_led_reconfig"
+create_bd_design $led_reconfig_design_name
+current_bd_design [get_bd_designs $led_reconfig_design_name.bd]
+make_wrapper -files [get_files $led_reconfig_design_name.bd] -top -import
 
 # 2. Define the list of modules required for your design
 # -------- Create Clk --------
@@ -27,10 +31,10 @@ set_property -dict [list \
 
 
 set br_modules [list \
+    "shift_led_left" \
     "decoupling" \
     "uart_interface" \
     "icap_sm" \
-    "shift_led_left" \
     "interface" \
     "startupe2_primitve" \
     "protocol_unit" \
@@ -42,11 +46,10 @@ foreach mod $br_modules {
     
     # Check if the module is already in the project sources
     set mod_obj [get_files -quiet ${mod}.v]
-    if { $mod_obj eq "" } {
+    if { [llength $mod_obj] == 0 } {
         set mod_obj [get_files -quiet ${mod}.vhd]
     }
-
-    if { $mod_obj ne "" } {
+    if { [llength $mod_obj] > 0 } {
         puts "Adding Module Reference: $mod"
         # Create the BD cell of type 'module'
         create_bd_cell -type module -reference $mod ${mod}_0
@@ -64,8 +67,8 @@ connect_bd_net [get_bd_pins clk_wiz_0/clk] \
 	       [get_bd_pins icap_sm_0/clk] \
 	       [get_bd_pins decoupling_0/clk] \
 	       [get_bd_pins interface_0/clk] \
-	       [get_bd_pins partition/sys_clk]
-connect_bd_net [get_bd_pins clk_wiz_0/clk] [get_bd_pins uart_interface_0/clk]
+	       [get_bd_pins shift_led_left_0/clk]
+
 make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_in1]
 set_property name sysclk [get_bd_ports clk_in1_0]
 
@@ -111,16 +114,24 @@ connect_bd_net [get_bd_pins icap_sm_0/busy] [get_bd_pins interface_0/icap_busy]
 
 regenerate_bd_layout
 # 6. Interface to the shifter
-connect_bd_net [get_bd_pins decoupling_0/clkd] [get_bd_pins shift_led_left_0/clk]
 create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
 connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins shift_led_left_0/enable_shift]
 
 regenerate_bd_layout
 validate_bd_design
+save_bd_design
+set_property top top_led_reconfig_wrapper [current_fileset]
+update_compile_order -fileset sources_1
 
-open_bd_design $led_reonfig_design_name.bd
+open_bd_design $led_reconfig_design_name.bd
+
+set_property target_constrs_file $cfg_dir/redpitaya-ports.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+
+
 puts "=============================================="
-puts " Design '$led_reonfig_design_name' created successfully  "
+puts " Design '$led_reconfig_design_name' created successfully  "
 puts "=============================================="
 after 1000
 set temp_files [list "*.jou" "*.log" "*.str"]
