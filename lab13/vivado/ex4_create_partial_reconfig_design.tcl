@@ -8,10 +8,10 @@
 set script_dir [file dirname [info script]]          ;# Tcl script location (/vivado)
 set origin_dir [file normalize "$script_dir/.."]    ;# project directory (projectlab_13_2)
 set cfg_dir       "$origin_dir/cfg"
+
 set led_reconfig_design_name "top_led_reconfig"
 create_bd_design $led_reconfig_design_name
 current_bd_design [get_bd_designs $led_reconfig_design_name.bd]
-make_wrapper -files [get_files $led_reconfig_design_name.bd] -top -import
 
 # 2. Define the list of modules required for your design
 # -------- Create Clk --------
@@ -98,7 +98,7 @@ regenerate_bd_layout
 connect_bd_net [get_bd_pins startupe2_primitve_0/EOS] [get_bd_pins decoupling_0/enable]
 connect_bd_net [get_bd_pins shift_led_left_0/led_o] [get_bd_pins decoupling_0/led]
 make_bd_pins_external  [get_bd_pins decoupling_0/ledd]
-set_property name LED [get_bd_ports ledd_0]
+set_property name led_o [get_bd_ports ledd_0]
 
 
 # 4. Protocol Unit to Interface (Addressing Logic)
@@ -120,6 +120,7 @@ connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins shift_led_left_0/ena
 regenerate_bd_layout
 validate_bd_design
 save_bd_design
+make_wrapper -files [get_files $led_reconfig_design_name.bd] -top -import
 set_property top top_led_reconfig_wrapper [current_fileset]
 update_compile_order -fileset sources_1
 

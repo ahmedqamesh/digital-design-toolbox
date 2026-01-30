@@ -22,11 +22,11 @@
 
 module decoupling(
     input enable,
-    input [15:0] led,
+    input [7:0] led,
     input clk,
     input rstn,
     
-    output [15:0] ledd,
+    output [7:0] ledd,
     output clkd,
     output rstnd    
     );

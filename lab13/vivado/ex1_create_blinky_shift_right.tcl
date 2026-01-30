@@ -8,6 +8,12 @@
 # We are interested in the left_shift_led, so  we will choose that.
 # Choose "automatically create configuration runs">> Next
 # NOw check the netlist by "Open synthesised design "
+#Use the following commands:
+## Try searching by the HD.PARTITION property instead
+#select_objects [get_cells -hierarchical -filter { HD.PARTITION == 1 }]
+## If that fails, search by name (assuming you named it 'partition')
+#select_objects [get_cells -hierarchical *partition*]
+# Since top_led_reonfig_i/partition is now selected, Vivado has confirmed that your Block Design Container is recognized within the hierarchy.
 
 
 set script_dir [file dirname [info script]]          ;# Tcl script location (/vivado)
