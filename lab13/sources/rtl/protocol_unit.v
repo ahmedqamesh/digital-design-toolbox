@@ -21,7 +21,7 @@ module protocol_unit #(parameter flag_byte = 8'h7E)(
     reg [7:0] dlc_reg;
     reg drec;
 
-    always @ (posedge clk or negedge rstn) begin
+    always @ (posedge clk) begin
         if (!rstn) begin
             state <= START_OF_FIELD;
             drec <= 0;

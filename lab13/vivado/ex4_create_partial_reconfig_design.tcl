@@ -2,11 +2,9 @@
 # Project recreation script for projectlab_13_2
 # Vivado version: works with 2020+ (XSim)
 # ============================================================
-
 # 1. Generate the Reconfig Wrapper
-
-set script_dir [file dirname [info script]]          ;# Tcl script location (/vivado)
-set origin_dir [file normalize "$script_dir/.."]    ;# project directory (projectlab_13_2)
+set script_dir [file dirname [info script]];# Tcl script location (/vivado)
+set origin_dir [file normalize "$script_dir/.."];# project directory (projectlab_13_2)
 set cfg_dir       "$origin_dir/cfg"
 
 set led_reconfig_design_name "top_led_reconfig"

@@ -117,14 +117,14 @@ module icap_sm #(parameter BUS_WIDTH = 8)(
       .RDWRB(rdwrb) // 1-bit input: Read/Write Select input
   );
     
-  ila_0 ila(
-    .clk(clk),
-    .probe0(csib),
-    .probe1(rdwrb),
-    .probe2(i),
-    .probe3(o),
-    .probe4(dready),
-    .probe5(readback)
-  );
+   // ila_0 ila(
+   //    .clk(clk),
+   //  .probe0(csib),
+   //  .probe1(rdwrb),
+   //  .probe2(i),
+   //  .probe3(o),
+   // .probe4(dready),
+   //  .probe5(readback)
+   //);
 
 endmodule

@@ -19,7 +19,7 @@ reg [BUS_WIDTH-1:0] data_register;
 reg write_request;
 reg read_request;
 
-always @ (posedge clk, negedge rstn) begin
+always @ (posedge clk) begin
     if (!rstn) begin
         data_register <= 0;
         write_request <= 0;

@@ -4,22 +4,14 @@
 // Engineer: 
 // 
 // Create Date: 11.12.2022 22:49:14
-// Design Name: 
+// Design Name: DFX Isolation Layer
 // Module Name: decoupling
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
+// Project Name: Partial Reconfiguration Lab
+// Target Devices: Zynq-7000 (xc7z010clg400-1)
+// Description: Decouples the Reconfigurable Partition during bitstream loading.
+//              Uses BUFGCE for glitch-free clock gating.
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
-
 module decoupling(
     input enable,
     input [7:0] led,

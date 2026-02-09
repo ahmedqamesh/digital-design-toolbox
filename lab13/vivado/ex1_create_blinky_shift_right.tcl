@@ -37,7 +37,6 @@ set_property target_language VHDL [current_project]
 # 3.  Add RTL files
 # --------------------------------------------------------------------
 # -------- Add RTL sources --------
-puts "Adding [llength $rtl_files] RTL files ..."
 if {[file exists "$rtl_dir"]} {
     add_files -fileset sources_1 [glob -nocomplain $rtl_dir/*.{vhd,vhdl,sv,v}]
 }
@@ -88,7 +87,7 @@ make_wrapper -files [get_files $design_name.bd] -top
 set wrapper_path [make_wrapper -fileset sources_1 -files [ get_files -norecurse $design_name.bd] -top]
 add_files -norecurse -fileset sources_1 $wrapper_path
 update_compile_order -fileset sources_1
-
+set_property top top_led_bd_wrapper [current_fileset]
 # --------------------------------------------------------------------
 # 4.  Add simulation files (create the sim fileset if needed)
 # --------------------------------------------------------------------
