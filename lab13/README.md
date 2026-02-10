@@ -1,31 +1,33 @@
-## Lab 13_1
+Lab 13: Dynamic Function eXchange (DFX)
 ## Concepts to learn
-
-Debugging of internal FPGA signals. Debugging strategies and what to debug
+In-system hardware reconfiguration using the Internal Configuration Access Port (ICAP). Partitioning a design into Static and Reconfigurable regions. Managing floorplanning constraints and decoupling logic during bitstream loading.
 
 ## Technologies used
-
-
-- Integrated Logic Analyzer ([ILA](https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property/ila.html))
-- Virtual Input/Output ([VIO](https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property/vio.html))
-- __Optional__ [IBERT](https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property/ibert_ultrascale_gth.html) for UltraScale™/UltraScale+™ GTH Transceivers
-- __Optional__ [In-System IBERT](https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property/in_system_ibert.html)
+- Internal Configuration Access Port (ICAPE2): Hardware primitive for self-reconfiguration.
+- DFX Controller / State Machine: Custom RTL to manage the configuration sequence.
+- BUFGCE: Global Clock Buffer with Clock Enable for glitch-free decoupling.
+- Pblocks: Physical floorplanning constraints for defining reconfigurable regions.
+- Zynq Processing System (PS7): Providing the central clock backbone and system reset.
 
 ## Project Structure
 ```
 ├─ .assets/
 │ 
 ├─ cfg/
-│ ├─ clocks.vhd          	-- pin assignments for the clk
-│ └─ ports.xdc   		-- pin assignments for the board (LED)
+│ ├─ redpitaya-ports.xdc      -- Pin assignments (LEDs, Clock)
+│ └─ partition_floorplan.xdc  -- Pblock definitions and cell placement
 │
 ├─ sources/
-│ ├─ blinky.vhd          	-- free‑running counter
-│ ├─ shift_led_right.vhd      -- Right logical shift register – triggered on the pulse
-│ └─ shift_led_left.vhd       -- Left logical shift register – triggered on the pulse
+│   ├─ rtl/
+│   │ ├─ icap_sm.v           -- ICAP State Machine (CSB, WEN control)
+│   │ ├─ protocol_unit.v     -- UART Parser for bitstream data (7E frame)
+│   │ ├─ decoupling.v        -- Isolation layer for clocks/resets
+│   │ ├─ reset_sync.v        -- 2-stage synchronous reset bridge
+│   │ ├─ shift_led_right.v   -- RM_1: Right logical shift register
+│   │ └─ shift_led_left.v    -- RM_2: Left logical shift register
 │
 └─ sim/
-  └─ sim_top.vhd       		-- blinky simulator
+  └─ tb_icap_controller.v    -- Simulation for the ICAP handshake
 ``` 
  
 ## Setup Instructions
@@ -33,34 +35,12 @@ Debugging of internal FPGA signals. Debugging strategies and what to debug
 # -----------------------------------------------------------------
 # 1. Get the repo
 # -----------------------------------------------------------------
-git clone git@gitlab.kit.edu:kit/ipe-sdr/teaching/kseta-fpga/ipe-fpga-courses.git
-git checkout debugging-exercise
+git clone git@github.com:ahmedqamesh/digital-design-toolbox.git
+git checkout lab13-reconfiguration
 ```
-## Exercise 1: Build a project with a shift register and PS for Zynq
-
-![shift_led_right_with_ps_zynq](https://github.com/ahmedqamesh/digital-design-toolbox/blob/main/.assets/images/ex1_create_shift_led_right.png)
-
+## Exercise 1: Building the ICAP Controller & Static Logic
 ```
-source ex1_create_blinky_shift_right.tcl
-# or vivado -source ex1_create_blinky_shift_right.tcl
-```
-
-## Exercise 2: Generate an Integrated Logic Analyzer (ILA)
-
-![shift_led_right_with_ps_zynq](https://github.com/ahmedqamesh/digital-design-toolbox/blob/main/.assets/images/ex2_adding_ILA.png)
-
-Run the following script from the tcl window in Vivado
-```
-source ex2-adding-ILA.tcl
-# or vivado -source ex2-adding-ILA.tcl
-```
-## Exercise 3: Generate a Virtual Input/Output (VIO)
-
-![shift_led_right_with_ps_zynq](https://github.com/ahmedqamesh/digital-design-toolbox/blob/main/.assets/images/ex3-adding-VIO.png)
-
-Run the following script from the tcl window in Vivado
-```
-source ex3-adding-VIO.tcl
-# or vivado -source ex3-adding-VIO.tcl
+source ex1_create_partial_reconfig_design.tcl
+# or vivado -source ex1_create_partial_reconfig_design.tcl
 ```
 
