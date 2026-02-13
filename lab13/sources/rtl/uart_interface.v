@@ -1,21 +1,14 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company:      KIT - Institute for Data Processing and Electronics (IPE)
+// Engineer:     Ahmed Qamesh
 // 
-// Create Date: 17.10.2021 21:15:52
-// Design Name: 
-// Module Name: uart_interface
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
+// Create Date:  17.10.2025 21:15:52
+// Design Name:  ICAP UART Controller
+// Module Name:  uart_interface
+// Project Name: Lab 13 - Partial Reconfiguration (DFX)
+// Target Devices: Red Pitaya STEMlab 125-14 (Zynq-7010)
+// Tool Versions: Vivado 2020.1+
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -33,7 +26,9 @@ module uart_interface(
     output [7:0] data_rx //Received data 
 );
     //8 data bits, 1 stop bit, no parity, 115200 baud, sampling @ 100 clk cycles
-    parameter clk_per_bit = 100;
+    //  clk_per_bit = 868 to achieve 115,200 Baud with a 100 MHz clock:
+    //  clk_per_bit = 100 to achieve 115,200 Baud with 11,520,000 Hz clock:
+    parameter clk_per_bit = 868;
     parameter ctr_size = 7; //8 bit data size
     
     wire rst;
