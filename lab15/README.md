@@ -24,7 +24,16 @@ create_project ${_xil_proj_name_} $origin_dir/${_xil_proj_name_}</code></pre>
 5. Edit the path of all the files after copying it to the directory<code>"$origin_dir/src/hdl/</code>.
 6. Remove all the lines that import the HDL wrapper file and the block design (.bd) file into the project. This can be done by commenting out all the (.bd) files in the design (e.g checkRequiredFiles)
 7. To generate the block design script in Vivado, with the block design open, select File->Export->Export block design. and save this file in the “src/bd” folder and commit it to version control.
-8. At the end of the file build.tcl, add the following lines:
+8. Export the design_1.tcl script for your Block Design (.bd) in Vivado
+ a. Open your project in Vivado.
+ b. Open your block design (double-click design_1.bd under the IP Integrator / Sources window).
+ c. From the top menu bar, select File → Export → Export Block Design...
+ d. In the dialog box that pops up:
+- Export File location: Set the path to your repository's sources folder: <code>.../sources/bd/design_1.tcl (or src/bd/design_1.tcl)</code>
+- Check "Automatically handle IP cores" if prompted.
+- Click OK.
+
+10. At the end of the file build.tcl, add the following lines:
 <pre><code># Create block design
  source $origin_dir/src/bd/design_1.tcl
  after 2000
