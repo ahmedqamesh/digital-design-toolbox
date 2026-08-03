@@ -33,7 +33,7 @@ create_project ${_xil_proj_name_} $origin_dir/${_xil_proj_name_}</code></pre>
 - Check "Automatically handle IP cores" if prompted.
 - Click OK.
 
-10. At the end of the file build.tcl, add the following lines:
+9. At the end of the file build.tcl, add the following lines:
 <pre><code># Create block design
  source $origin_dir/src/bd/design_1.tcl
  after 2000
